@@ -10,7 +10,7 @@
         android:id="@+id/btn_1"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#EE1D78FF"
+        android:background="#EE5D9CFA"
         android:text="Row1"
         android:textAllCaps="false"
         android:layout_margin="10dp"
