@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#E6018A6F"
+        android:text="Details Form"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/tv_firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_1"
+        android:text="*First name"
+        android:layout_alignStart="@id/btn_1"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_firstName"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignTop="@id/tv_firstName"
+        android:textSize="13sp"/>
+    <TextView
+        android:id="@+id/tv_lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_firstName"
+        android:text="*Last name"
+        android:layout_alignStart="@id/btn_1"
+        android:textSize="18sp"
+        android:layout_marginTop="18dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_lastName"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignTop="@id/tv_lastName"
+        android:textSize="13sp"/>
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_lastName"
+        android:text="*Gender"
+        android:layout_alignStart="@id/btn_1"
+        android:textSize="18sp"
+        android:layout_marginTop="18dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_gender"
+        android:layout_alignStart="@id/btn_1"
+        android:layout_marginTop="18dp"
+        android:text="Age on December 10,2018"
+        android:textSize="18sp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_age"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignTop="@id/tv_age"
+        android:textSize="13sp"
+        android:inputType="number"/>
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_below="@id/tv_age"
+        android:layout_marginTop="22dp"
+        android:layout_alignStart="@id/tv_age"
+        android:textSize="15sp"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/gendres"
+        android:layout_toRightOf="@id/tv_gender"
+        android:layout_marginStart="8dp"
+        android:layout_alignBaseline="@id/tv_gender"
+        />
+</RelativeLayout>

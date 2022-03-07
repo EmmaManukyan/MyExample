@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Homework3"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_frNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="First Number"
+        android:textSize="20sp"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="tv_frNum,tv_secNum"
+        app:barrierDirection="end"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="edt_1,tv_frNum"
+        app:barrierDirection="bottom"/>
+
+    <EditText
+        android:id="@+id/edt_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_frNum"
+        app:layout_constraintStart_toEndOf="@id/barrier1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
+        android:inputType="number"
+        android:maxLength="8"
+        />
+
+    <TextView
+        android:id="@+id/tv_secNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/barrier2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Second Number"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/edt_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_secNum"
+        app:layout_constraintStart_toEndOf="@id/barrier1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
+        android:inputType="number"
+        android:maxLength="8"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="edt_2,tv_secNum"
+        app:barrierDirection="bottom"/>
+
+    <Button
+        android:id="@+id/btn_plus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="+"
+        />
+
+    <Button
+        android:id="@+id/btn_minus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="-"
+        />
+
+    <Button
+        android:id="@+id/btn_divide"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="/"
+        />
+
+    <Button
+        android:id="@+id/btn_multiply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="x"
+        />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btn_plus,btn_minus,btn_multiply,btn_divide"
+        app:layout_constraintTop_toBottomOf="@id/barrier3"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/buttons"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_result_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/buttons"
+        app:layout_constraintStart_toStartOf="@id/edt_1"
+        android:layout_marginTop="16dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
